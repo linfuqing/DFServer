@@ -8,7 +8,7 @@ class CraftDestination
 	public $m_uGroupMask;
 	public $m_fChance;
 	
-	public function CraftDestination(
+	public function __construct(
 			$uChanceItemID, 
 			$uOutputItemID, 
 			$uOutputItemCount, 
@@ -29,7 +29,7 @@ class CraftSource
 	public $m_uInputItemCount;
 	public $m_sLabel;
 	
-	public function CraftSource($uInputItemID, $uInputItemCount, $sLabel)
+	public function __construct($uInputItemID, $uInputItemCount, $sLabel)
 	{
 		$this->m_uInputItemID = $uInputItemID;
 		$this->m_uInputItemCount = $uInputItemCount;

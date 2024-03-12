@@ -9,7 +9,7 @@ class EmployeeItem
 	public $m_uCook;
 	public $m_uSkills;
 	
-	public function EmployeeItem(
+	public function __construct(
 			$uLevelItemID,
 			$uLevelCraftID,
 			$uService,
@@ -37,7 +37,7 @@ class Employee
 	const NAME_SPACE = 'DFEmployee';
 	const NAME_SPACE_ID = 'DFEmployeeID';
 	
-	public function Employee($uItemID, $uCraftID)
+	public function __construct($uItemID, $uCraftID)
 	{
 		$this->m_uItemID = $uItemID;
 		$this->m_uCraftID = $uCraftID;
@@ -141,7 +141,7 @@ class UserEmployee
 	const NAME_SPACE = 'DFEmployeeUnit';
 	const NAME_SPACE_IDS = 'DFUserEmployeeIDs';
 	
-	public function UserEmployee($uUserItemID, $uUserUnitID, $uPosition/*, $uExp*/)
+	public function __construct($uUserItemID, $uUserUnitID, $uPosition/*, $uExp*/)
 	{
 		$this->m_uUserItemID = $uUserItemID;
 		$this->m_uUserUnitID = $uUserUnitID;

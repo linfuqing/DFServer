@@ -7,7 +7,7 @@ class Item
 	
 	const NAME_SPACE = 'DFItem';
 	
-	public function Item(/*$uValue, */$sLabel)
+	public function __construct(/*$uValue, */$sLabel)
 	{
 		//$this->m_uValue = $uValue;
 		$this->m_sLabel = $sLabel;
@@ -73,7 +73,7 @@ class UserItem
 	const NAME_SPACE = 'DFUserItem';
 	const NAME_SPACE_IDS = 'DFUserItemIDs';
 	
-	public function UserItem($uUserID, $uItemID, $uCount)
+	public function __construct($uUserID, $uItemID, $uCount)
 	{
 		$this->m_uUserID = $uUserID;
 		$this->m_uItemID = $uItemID;

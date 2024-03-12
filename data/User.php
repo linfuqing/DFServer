@@ -8,7 +8,7 @@ class User
 	const NAME_SPACE = 'DFUser';
 	const NAME_SPACE_ID = 'DFUserID';
 	
-	public function User(/*$sName, */$sChannelUser)
+	public function __construct(/*$sName, */$sChannelUser)
 	{
 		//$this->m_sName = $sName;
 		$this->m_sChannelUser = $sChannelUser;

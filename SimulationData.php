@@ -9,13 +9,15 @@ const FUNCTION_UNIT_UPGRADE = 4;
 const FUNCTION_EMPLOYEE_QUERY = 5;
 const FUNCTION_EMPLOYEE_POSITION = 6;
 const FUNCTION_EMPLOYEE_UPGRADE = 7;
-const FUNCTION_ITEM_QUERY = 8;
-const FUNCTION_CRAFT_QUERY = 9;
-const FUNCTION_QUEST_QUERY = 10;
-const FUNCTION_QUEST_DRAW = 11;
-const FUNCTION_CUSTOMERS_QUERY = 12;
-const FUNCTION_GAME_START = 13;
-const FUNCTION_GAME_END = 14;
+//const  FUNCTION_UPGRADE_EMPLOYEES = 7;
+//const  FUNCTION_EMPLOYEE_DRAW = 8;
+const FUNCTION_ITEM_QUERY = 9;
+const FUNCTION_CRAFT_QUERY = 10;
+const FUNCTION_QUEST_QUERY = 11;
+const FUNCTION_QUEST_DRAW = 12; 
+const FUNCTION_CUSTOMERS_QUERY = 13;
+const FUNCTION_GAME_START = 14;
+const FUNCTION_GAME_END = 15;
 
 /*class CommandService
 {
@@ -36,7 +38,7 @@ class CommandFood
 	public $m_uItemID;
 	public $m_uCount;
 	
-	public function CommandFood($uItemID, $uCount)
+	public function __construct($uItemID, $uCount)
 	{
 		$this->m_uItemID = $uItemID;
 		$this->m_uCount = $uCount;
@@ -134,7 +136,6 @@ switch ($nFunction)
 					$uFoodID = Food::GetID($uItemID, $Redis, $Mysqli);
 					if(!$uFoodID)
 						continue;
-						
 					$auFoodIDs[$uItemID] = $uFoodID;
 				}
 				

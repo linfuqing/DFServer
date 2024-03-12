@@ -10,7 +10,7 @@ class CustomerItem
 	public $m_uMaxCalories;
 	public $m_uMaxExpectations;
 	
-	public function CustomerItem(
+	public function __construct(
 			$uID, 
 			$uLevelCraftID, 
 			$uMaxExp, 
@@ -35,7 +35,7 @@ class CustomerFood
 	public $m_uExpectations;
 	public $m_fChanceToMeet;
 	
-	public function CustomerFood($uID, $uExpectations, $fChanceToMeet)
+	public function __construct($uID, $uExpectations, $fChanceToMeet)
 	{
 		$this->m_uID = $uID;
 		$this->m_uExpectations = $uExpectations;
@@ -183,7 +183,7 @@ class UserCustomer
 	const NAME_SPACE = 'DFCustomerUnit';
 	const NAME_SPACE_IDS = 'DFUserCustomerIDs';
 	
-	public function UserCustomer($uUserItemID, $uExp)
+	public function __construct($uUserItemID, $uExp)
 	{
 		$this->m_uUserItemID = $uUserItemID;
 		$this->m_uExp = $uExp;

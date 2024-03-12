@@ -8,7 +8,7 @@ class FoodItem
 	public $m_uCalories;
 	public $m_uDelicious;
 	
-	public function FoodItem(
+	public function __construct(
 			$uID,
 			$uFoodItemID, 
 			$uFoodCraftID, 
@@ -34,7 +34,7 @@ class Food
 	const NAME_SPACE = 'DFFood';
 	const NAME_SPACE_ID = 'DFFoodID';
 	
-	public function Food($uExpectations)
+	public function __construct($uExpectations)
 	{
 		//$this->m_uCraftID = $uCraftID;
 		$this->m_uExpectations = $uExpectations;

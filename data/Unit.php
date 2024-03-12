@@ -6,7 +6,7 @@ class UnitCustomer
 	public $m_fChanceToMeet;
 	public $m_aFoods;
 	
-	public function UnitCustomer(
+	public function __construct(
 			$uID,
 			$uExpectations, 
 			$fChanceToMeet)
@@ -34,7 +34,7 @@ class Unit
 	const NAME_SPACE = 'DFUnit';
 	const NAME_SPACE_ID = 'DFUnitID';
 	
-	public function Unit(
+	public function __construct(
 			$uLevelItemID, 
 			$uLevelCraftID, 
 			$uMaxExp,
@@ -162,7 +162,7 @@ class UserUnit
 	const NAME_SPACE = 'DFUserUnit';
 	const NAME_SPACE_IDS = 'DFUserUnitIDs';
 	
-	public function UserUnit($uUserID, $uUnitID, $uComfort, $uExp, $uTickTime)
+	public function __construct($uUserID, $uUnitID, $uComfort, $uExp, $uTickTime)
 	{
 		$this->m_uUserID = $uUserID;
 		$this->m_uUnitID = $uUnitID;

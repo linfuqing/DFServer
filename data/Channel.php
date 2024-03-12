@@ -5,7 +5,7 @@ class Channel
 	
 	const NAME_SPACE = 'DFChannel';
 	
-	public function Channel($uID)
+	public function __construct($uID)
 	{
 		$this->m_uID = $uID;
 	}

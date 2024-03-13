@@ -382,16 +382,19 @@ switch ($nFunction)
 					
 					$Empoyee = Employee::Get($uEmpoyeeID, $Redis, $Mysqli);
 					
-					$sResult .= pack('V9', 
+					$sResult .= pack('V10', 
 							$uUserEmpoyeeID,
-							$UserEmpoyee->m_uUserUnitID, 
-							$UserEmpoyee->m_uUserItemID, 
-							$Empoyee->m_uLevelCraftID, 
-							$Empoyee->m_uService, 
-							$Empoyee->m_uCharm, 
-							$Empoyee->m_uCook, 
-							$Empoyee->m_uSkills, 
-							$UserEmpoyee->m_uPosition);
+					        $UserEmpoyee->m_uUserItemID, 
+					        $Empoyee->m_aItems[$uItemID]->m_uLevelCraftID, 
+					        $UserEmpoyee->m_uPosition,
+							//$UserEmpoyee->m_uUserUnitID, 
+							0,//exp
+					        100,//maxExp
+					        $Empoyee->m_aItems[$uItemID]->m_uService, 
+					        $Empoyee->m_aItems[$uItemID]->m_uCharm, 
+					        $Empoyee->m_aItems[$uItemID]->m_uCook, 
+					        $Empoyee->m_aItems[$uItemID]->m_uSkills
+							);
 				}
 				
 				echo $sResult;

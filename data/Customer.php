@@ -93,6 +93,7 @@ class Customer
 				}
 				
 				$Result = mysqli_query($Mysqli, "SELECT id, customer_id, level_item_id, level_craft_id, max_exp, max_exp_to_unit, max_exp_per_time, max_calories, max_expectations FROM customer_items");
+				$aResult = mysqli_fetch_array($Result);
 				if($Result)
 				{
 					while($aResult)

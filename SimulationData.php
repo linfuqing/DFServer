@@ -590,15 +590,20 @@ switch ($nFunction)
 
 							foreach ($Food->m_aItems as $uItemID => $FoodItem)
 							{
+							    //trigger_error($uItemID);
 								if(isset($auUserItemIDs[$uItemID]))
 								{
+								    trigger_error("Enter2");
 									$Craft = Craft::Get($FoodItem->m_uFoodCraftID, $Redis, $Mysqli);
 									if($Craft)
 									{
+									    trigger_error("Enter3");
 										for($j = 0; $j < $uFoodCount; ++$j)
 										{
 											if(!$Craft->Input($UserUnit->m_uUserID, $Redis, $Mysqli))
 											{
+											    trigger_error("Enter4");
+											    
 												$uFoodCount = $j;
 												
 												break;

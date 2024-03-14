@@ -10,6 +10,10 @@ $Redis->flushAll();
 
 echo "Clear Success!";
 
+/*include_once 'data/Customer.php';
+$Food = Customer::Get(1, $Redis, $Mysqli);
+echo var_export($Food, true);*/
+
 /*include_once 'data/Channel.php';
 $Channel = Channel::Get('None', $Redis, $Mysqli);
 echo var_export($Channel, true);
